@@ -1,0 +1,735 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="SPICE," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="在Unbuntu 下SPICE 的配置的步骤">
+<meta property="og:type" content="article">
+<meta property="og:title" content="虚拟化技术学习：Unbuntu 下SPICE 的配置">
+<meta property="og:url" content="https://whjkm.github.io/2015/01/15/虚拟化技术学习(二) Unbuntu 下SPICE 的配置/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在Unbuntu 下SPICE 的配置的步骤">
+<meta property="og:image" content="http://img.blog.csdn.net/20141124190502963?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2hqa20=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+<meta property="og:updated_time" content="2017-03-28T09:46:09.477Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="虚拟化技术学习：Unbuntu 下SPICE 的配置">
+<meta name="twitter:description" content="在Unbuntu 下SPICE 的配置的步骤">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20141124190502963?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2hqa20=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://whjkm.github.io/2015/01/15/虚拟化技术学习(二) Unbuntu 下SPICE 的配置/"/>
+
+
+
+
+
+  <title> 虚拟化技术学习：Unbuntu 下SPICE 的配置 | Hexo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://whjkm.github.io/2015/01/15/虚拟化技术学习(二) Unbuntu 下SPICE 的配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Para">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                虚拟化技术学习：Unbuntu 下SPICE 的配置
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-01-15T21:30:30+08:00">
+                2015-01-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/虚拟化技术/" itemprop="url" rel="index">
+                    <span itemprop="name">虚拟化技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在Unbuntu 下SPICE 的配置的步骤<br><a id="more"></a><br>最近一直搞spice,安装了就费了我好久时间,在网上看别人的一些教程都是说参看<a href="http://docs.cslabs.clarkson.edu/wiki/SPICE" target="_blank" rel="external">官方教程</a>但是进教程一看,发现内容已经被删除了,经过我的不懈努力还是找到了一篇应该是从官方教程翻译出来的<a href="http://www.verydemo.com/cj.jsp?c=59&amp;u=ubuntu-xia-spice-de-an-zhuang-yu-pei-zhi" target="_blank" rel="external">教程</a>。然后我就按着教程一步一步的安装,但是在中间总是出现了一些错误,最后总是没能全部安装好，我也来做一次搬运工吧，搬运一些官方教程上面的步骤。<br>SPICE主要包括三部分：SPICE protocol （协议）、SPICE Client（客户端） 、SPICE Server（服务端）</p>
+<p>协议是服务端与客户端通信的基础，<br>客户端是享受服务的终端机器，<br>服务端是提供服务的后台机器。</p>
+<ol>
+<li>安装前预备工作：<br>由于要从git 服务器下载源码安装，所以需要安转git工具<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install build-essential autoconf git-core</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>当然，还有编译安装包使用的工具也要安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install libtool liblog4cpp5-dev libavcodec-dev libssl-dev xlibmesa-glu-dev libasound-dev libpng12-dev libfreetype6-dev \</div><div class="line">libfontconfig1-dev libogg-dev libxrandr-dev kvm libgcrypt-dev libsdl-dev libnss3-dev libpixman-1-dev libxfixes-dev libjpeg8-dev \</div><div class="line">libsasl2-dev python-pyparsing</div></pre></td></tr></table></figure></p>
+<p>最后准备，创建一个文件夹，用来存放下载的安装包（如果你对下载安装位置很清楚，当然也可以不用新建这个文件夹）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd</div><div class="line">mkdir spice-sources</div><div class="line">cd spice-sources</div></pre></td></tr></table></figure></p>
+<ol>
+<li>SPICE安装依赖包：</li>
+</ol>
+<p>1.1  libcacard<br>This library is what SPICE uses to emulate smart cards and smart card readers.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git clone git://people.freedesktop.org/~alon/libcacard</div><div class="line">cd libcacard</div><div class="line">./autogen.sh</div><div class="line">make</div><div class="line">sudo make install</div><div class="line">cd ..</div></pre></td></tr></table></figure></p>
+<p>1.2.  安装协议（SPICE protocol headers）<br>The first dependency to install is the spice protocol headers.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">wget http://spice-space.org/download/releases/spice-protocol-0.8.0.tar.bz2</div><div class="line">tar xjvf spice-protocol-0.8.0.tar.bz2</div><div class="line">cd spice-protocol-0.8.0</div><div class="line">mkdir m4</div><div class="line">./configure</div><div class="line">make</div><div class="line">sudo make install</div><div class="line">cd ..</div></pre></td></tr></table></figure></p>
+<p>1.3.安装celt<br>SPICE requires a specific version of the celt low-latency audio codec (0.5.1.3). Since it is unavailable in the Ubuntu repositories, it must also be compiled.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">wget http://downloads.us.xiph.org/releases/celt/celt-0.5.1.3.tar.gz</div><div class="line">tar xvzf celt-0.5.1.3.tar.gz</div><div class="line">cd celt-0.5.1.3/</div><div class="line">./configure</div><div class="line">make</div><div class="line">sudo make install</div><div class="line">cd ..</div></pre></td></tr></table></figure></p>
+<ol>
+<li>安装客户端（SPICE client）<br>This gives us spicec, the spice client. It’s used to connect to SPICE guests.<br>客户端用来链接服务端的。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">wget http://spice-space.org/download/releases/spice-0.8.1.tar.bz2</div><div class="line">tar xjvf spice-0.8.1.tar.bz2</div><div class="line">cd spice-0.8.1</div><div class="line">./configure --enable-smartcard</div><div class="line">make</div><div class="line">sudo make install</div><div class="line">cd ..</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>This step is possible to perform on a 32-bit host; it’s only installing the SPICE client.<br>值得注意的是：32位系统只能安装SPICE 的客户端，下面的服务端是无法安装的！</p>
+<ol>
+<li>安装SPICE server<br>Now, it’s time to build the SPICE server itself. SPICE has been rolled into QEMU now, so this step amounts to installing a recent version of QEMU. In fact, we will be pulling the latest QEMU source code for version 0.14. Oddly enough, QEMU 0.14 is available in the Ubuntu repositories, but SPICE support is not included in the build.<br>以上的意思是说QEMU已经包含 SPICE服务，<br>First, we need to change an environment variable so that ./configure can find the spice protocol libraries we installed. You will need to set this variable anytime you want to use qemu with SPICE, so it’s easiest to put it in your .bashrc.<br>修改环境变量以至于让configure找到我们安装spice协议的函数库。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> echo &quot;export LD_LIBRARY_PATH=/usr/local/lib:$&#123;LD_LIBRARY_PATH&#125;&quot; &gt;&gt; ~/.bashrc</div><div class="line">source ~/.bashrc</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>Now, we can continue with the installation. Note that if you require a specific softmmu target, you can add a list of them with the –target argument. By default, QEMU only builds with support for 32-bit x86 guests.<br>继续安装，（PS：如果在之前已经安装过QEMU的话，这一步可以省略）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">wget http://download.savannah.gnu.org/releases/qemu/qemu-0.14.0.tar.gz</div><div class="line">tar xzvf qemu-0.14.0.tar.gz</div><div class="line">cd qemu-0.14.0</div><div class="line">./configure --enable-spice --enable-kvm --enable-io-thread --audio-drv-list=alsa,oss --enable-system</div><div class="line">make</div><div class="line">sudo make install</div></pre></td></tr></table></figure></p>
+<p>Now, we need to copy over some BIOS files that qemu will need to start SPICE VMs. We just need to put them in a location that QEMU expects them to be.<br>拷贝相关文件到QEMU 目录下让qemu启动虚拟机。（PS：如果之前已经安装QEMU，此步只需确认在/usr/share/qemu/目录下有以下两个文件即可，如果没有，那就得手动拷贝过去）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo cp pc-bios/vgabios-qxl.bin /usr/share/qemu/</div><div class="line">sudo cp pc-bios/pxe-e1000.bin /usr/share/qemu/</div><div class="line">cd ..</div></pre></td></tr></table></figure></p>
+<p>Now, qemu with SPICE support is installed in /usr/local/bin, and the ordinary system qemu is installed in/usr/bin. We’ll make a shortcut command called ‘qemu-spice’ that you can invoke separately from the system qemu (which doesn’t have SPICE support).<br>以上将含有SPICE 服务的QEMU安装到usr/local/bin（PS：也可能在usr/bin下），普通 QEMU 系统安装在/usr/bin下。以下是创建一个名字叫做qemu-spice的工具，其实是qemu的一个拷贝。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /usr/local/bin</div><div class="line">sudo mv qemu qemu-spice</div></pre></td></tr></table></figure></p>
+<p>至此，server安装完毕。</p>
+<p>4.使用SPICE<br>4.1使用Client<br>To invoke the spice client, use the command：调用客户端，使用如下命令<br>注意：<server hostname=""> 是服务器的地址，如果你的电脑同时安装客户服务端，那么你可以使用127.0.0.1来自己测试，<port number=""> 是服务端制定的端口号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">spicec -h &lt;server hostname&gt; -p &lt;port number&gt;</div></pre></td></tr></table></figure></port></server></p>
+<p>4.2 使用Server<br>Invoking the spice server is rather more complex than the client, since you have to set the parameters of the virtualized guest. For example,<br>调用Server要比客户端麻烦得多。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">qemu-spice -spice port=5930,disable-ticketing -drive file=/path/to/image -vga qxl -device AC97 -usbdevice tablet -m 1024 -enable-kvm -net nic -net user</div></pre></td></tr></table></figure></p>
+<p>注意：file=/path/to/image 要替换为系统的镜像文件，比如我的file=/kvm/vdisk.img</p>
+<p>这样就启动了SPICE 服务端，然后在客户机上使用客户端命令<br>spicec -h <server hostname=""> -p <port number=""><br>就可以在SPICE客户端启动服务机上的虚拟机系统了。<br>文件，比如我的file=/kvm/vdisk.img</port></server></p>
+<p>以上是教程里面的安装过程.<br>经过以上的安装过程之后.我们来查看一下已经安装了哪些和spice有关的packages.<br>我们输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dpkg --get-selections | grep spice</div></pre></td></tr></table></figure></p>
+<p>可能会有一些内容没安装好,下面是全部安装好的截图.<br><img src="http://img.blog.csdn.net/20141124190502963?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2hqa20=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="此处输入图片的描述"></p>
+<p>我第一次安装的时候,发现里面很多东西都没有安装好,然后我就直接用 sudo apt-get install 这个命令,安装里面没有的packages.</p>
+<p>然后我们就可以在kvm中安装虚拟机了,可以参看之前的博客 <a href="http://blog.csdn.net/whjkm/article/details/40587955" target="_blank" rel="external">http://blog.csdn.net/whjkm/article/details/40587955</a></p>
+<p>在kvm中安装spice请参看下一篇博客~</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/SPICE/" rel="tag"># SPICE</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/01/13/解决方案/" rel="next" title="hexo博客出现command not found解决方案">
+                <i class="fa fa-chevron-left"></i> hexo博客出现command not found解决方案
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/01/16/虚拟化技术学习：在kvm中安装spice/" rel="prev" title="虚拟化技术学习：在kvm中安装spice">
+                虚拟化技术学习：在kvm中安装spice <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Para" />
+          <p class="site-author-name" itemprop="name">Para</p>
+           
+              <p class="site-description motion-element" itemprop="description">记录生活和学习的点滴</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Para</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
