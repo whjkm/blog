@@ -13,8 +13,8 @@ keywords: "Hexo, NexT"
 # Set rss to specific value if you have burned your feed already.
 rss:
 
-# Specify the date when the site was setup
-#since: 2015
+# Specify the date when the site was setupsince: 2015
+since: 2015
 
 # icon between year and author @Footer
 authoricon: heart
@@ -133,8 +133,10 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
+social:
   #LinkLabel: Link
+  GitHub: https://github.com/whjkm
+  Weibo: http://weibo.com/u/2841022970
 
 
 # Social Links Icons
@@ -154,7 +156,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-#avatar:
+avatar: http://onmalbkeh.bkt.clouddn.com/20170305175657_GF3um.jpg
 
 
 # Table Of Contents in the Sidebar
@@ -344,7 +346,7 @@ changyan:
 #yandex_site_verification:
 
 # CNZZ count
-#cnzz_siteid:
+cnzz_siteid: 1261623824
 
 # Application Insights
 # See https://azure.microsoft.com/en-us/services/application-insights/
@@ -474,7 +476,7 @@ use_motion: true
 fancybox: true
 
 # Canvas-nest
-canvas_nest: false
+canvas_nest: true
 
 #three_waves
 three_waves: false

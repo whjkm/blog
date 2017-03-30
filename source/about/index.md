@@ -1,3 +1,8 @@
+title: 
+date: 2017-3-30 15:44:04
+type: "about"
+comments: false
+
 #**欢迎光临我的博客**
 ![共勉][1]
 ##**About me**
@@ -10,3 +15,5 @@
 
 
   [1]: http://dn-whjkm.qbox.me/9279263e8050deb94a212bbc53a53985.jpeg
+
+---
