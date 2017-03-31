@@ -113,13 +113,13 @@ font:
   # The `size` option use `px` as unit
   logo:
     external: true
-    family: Lobster Two
-    size: 24
+    family:
+    size:
 
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family: PT Mono
+    family:
     size:
 
 
@@ -221,7 +221,7 @@ excerpt_description: true
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
+  enable: true
   length: 150
 
 # Post meta display settings
