@@ -1,2 +1,2 @@
-# blog
-my personal blog bak
+# whjkm.github.io
+个人博客
