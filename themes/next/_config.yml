@@ -137,6 +137,9 @@ social:
   #LinkLabel: Link
   GitHub: https://github.com/whjkm
   Weibo: http://weibo.com/u/2841022970
+  Douban: https://www.douban.com/people/67676061/
+  CSDN: https://blog.csdn.net/whjkm
+  CloudMusic: http://music.163.com/#/user/home?id=18805992
 
 
 # Social Links Icons
@@ -151,6 +154,9 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
+  Douban: heart
+  CSDN: basketball-ball
+  CloudMusic: music
 
 
 # Sidebar Avatar
@@ -401,7 +407,7 @@ leancloud_visitors:
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: false
+  enable: true
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>
@@ -412,7 +418,7 @@ busuanzi_count:
   site_pv_footer:
   # custom pv span for one page only
   page_pv: true
-  page_pv_header: <i class="fa fa-file-o"></i>
+  page_pv_header: <i class="fa fa-eye"></i>
   page_pv_footer:
 
 

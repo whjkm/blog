@@ -24,6 +24,21 @@
         {% include '_partials/share/duoshuo_share.swig' %}
       {% endif %}
     </div>
+		   <div id="container"> </div>
+               <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+                <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+                <script>
+                var gitment = new Gitment({
+					  id: '页面 ID', // 可选。默认为 location.href
+					  owner: 'whjkm',
+					  repo: 'whjkm.github.io',
+					  oauth: {
+						client_id: '714965cedbb13275b08e',
+						client_secret: '13f9ca22b3b0f4fb90efddf8bc9ba6b2a46a8439',
+						},
+						})
+						gitment.render('container')
+				</script>
   </div>
 
 {% endblock %}
