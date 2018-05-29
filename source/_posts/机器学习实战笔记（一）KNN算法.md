@@ -1,8 +1,8 @@
 ---
 title: 机器学习实战笔记（一）KNN算法
 date: 2018-04-24 10:58:27
-tags: 机器学习
-categories:
+tags: 机器学习 python
+categories: 机器学习
 ---
 用python学习机器学习的笔记，所有的代码和实例来源于《机器学习实战》一书。所有源代码和数据都可以在[我的github][1]上下载。
 ## 1.机器学习基础
@@ -42,7 +42,7 @@ def createDataSet():
     labels = ['A','A','B','B']
     return group, labels
 ```
-###2.KNN算法
+### 2.KNN算法
 使用k-近邻算法将每组数据划分到每个类中：
 
  1. 计算当前点和测试数据集中的点之间的距离。
