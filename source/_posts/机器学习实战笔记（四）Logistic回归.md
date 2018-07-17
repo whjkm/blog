@@ -1,7 +1,7 @@
 ---
 title: 机器学习实战笔记（四）Logistic回归
 date: 2018-05-28 17:24:48
-tags: 机器学习 python
+tags: [机器学习, python]
 categories: 机器学习
 ---
 ### Logistic回归

@@ -1,7 +1,7 @@
 ---
 title: Python爬虫学习（二）使用Selenium和PyQuery爬取网页
 date: 2018-07-15 20:48:35
-tags: python
+tags: [python, selenium]              
 categories: 爬虫
 ---
 ## 1.概述：

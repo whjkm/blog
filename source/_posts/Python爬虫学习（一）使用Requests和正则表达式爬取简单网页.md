@@ -1,7 +1,7 @@
 ---
 title: Python爬虫学习（一）使用Requests和正则表达式爬取简单网页
 date: 2018-06-29 09:17:32
-tags: python 
+tags: [python, requests, 正则表达式] 
 categories: 爬虫
 ---
 ## 1.概述

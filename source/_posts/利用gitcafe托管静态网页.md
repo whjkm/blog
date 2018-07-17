@@ -1,6 +1,6 @@
 title: "利用gitcafe托管静态网页"
 date: 2014-11-29 19:32:20
-tags: gitcafe git
+tags: [gitcafe, git]
 categories: hexo
 ---
 折腾网页，用gitcafe托管静态网页

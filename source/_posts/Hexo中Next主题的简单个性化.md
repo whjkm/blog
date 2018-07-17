@@ -1,7 +1,7 @@
 ---
 title: Hexo中Next主题的简单个性化
 date: 2018-04-22 23:46:08
-tags: hexo
+tags: [hexo, next]
 categories: hexo
 ---
 差不多有一年多没有折腾博客了，最近想着还是要重拾写博客的这一习惯，所以就动手将hexo重新折腾了一番。
