@@ -1,20 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
 
 
 
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
 
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
 
 
 
@@ -37,74 +57,30 @@
 
 
 
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
 
 
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico?v=6.3.0">
 
 
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v=6.3.0">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v=6.3.0">
 
 
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
-
-
-
+  <link rel="mask-icon" href="/favicon.ico?v=6.3.0" color="#222">
 
 
 
-<meta name="description" content="欢迎光临我的博客
-About me关于这个博客基于hexo，用这个博客来记录自己的一些收获。附上我的csdn博客主要用来记录一些学习的经历（csdn上的博文数量还是远远多一些），这里csdn自由，可能没有csdn上那么方便，不定期会进行一些更新，记录自己学习以及过程中的点滴。
-Just Do It!!!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mars">
-<meta property="og:url" content="https://whjkm.github.io/about/index.html">
-<meta property="og:site_name" content="Mars">
-<meta property="og:description" content="欢迎光临我的博客
-About me关于这个博客基于hexo，用这个博客来记录自己的一些收获。附上我的csdn博客主要用来记录一些学习的经历（csdn上的博文数量还是远远多一些），这里csdn自由，可能没有csdn上那么方便，不定期会进行一些更新，记录自己学习以及过程中的点滴。
-Just Do It!!!">
-<meta property="og:image" content="http://dn-whjkm.qbox.me/9279263e8050deb94a212bbc53a53985.jpeg">
-<meta property="og:updated_time" content="2018-04-22T08:47:43.861Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mars">
-<meta name="twitter:description" content="欢迎光临我的博客
-About me关于这个博客基于hexo，用这个博客来记录自己的一些收获。附上我的csdn博客主要用来记录一些学习的经历（csdn上的博文数量还是远远多一些），这里csdn自由，可能没有csdn上那么方便，不定期会进行一些更新，记录自己学习以及过程中的点滴。
-Just Do It!!!">
-<meta name="twitter:image" content="http://dn-whjkm.qbox.me/9279263e8050deb94a212bbc53a53985.jpeg">
+
+
+
 
 
 
@@ -113,13 +89,13 @@ Just Do It!!!">
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -131,51 +107,88 @@ Just Do It!!!">
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="欢迎光临我的博客 About me关于这个博客基于hexo，用这个博客来记录自己的一些收获。附上我的csdn博客主要用来记录一些学习的经历（csdn上的博文数量还是远远多一些），这里csdn自由，可能没有csdn上那么方便，不定期会进行一些更新，记录自己学习以及过程中的点滴。 Just Do It!!!">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mars">
+<meta property="og:url" content="https://whjkm.github.io/about/index.html">
+<meta property="og:site_name" content="Mars">
+<meta property="og:description" content="欢迎光临我的博客 About me关于这个博客基于hexo，用这个博客来记录自己的一些收获。附上我的csdn博客主要用来记录一些学习的经历（csdn上的博文数量还是远远多一些），这里csdn自由，可能没有csdn上那么方便，不定期会进行一些更新，记录自己学习以及过程中的点滴。 Just Do It!!!">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://dn-whjkm.qbox.me/9279263e8050deb94a212bbc53a53985.jpeg">
+<meta property="og:updated_time" content="2018-04-22T08:47:43.862Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mars">
+<meta name="twitter:description" content="欢迎光临我的博客 About me关于这个博客基于hexo，用这个博客来记录自己的一些收获。附上我的csdn博客主要用来记录一些学习的经历（csdn上的博文数量还是远远多一些），这里csdn自由，可能没有csdn上那么方便，不定期会进行一些更新，记录自己学习以及过程中的点滴。 Just Do It!!!">
+<meta name="twitter:image" content="http://dn-whjkm.qbox.me/9279263e8050deb94a212bbc53a53985.jpeg">
+
+
+
+
+
 
   <link rel="canonical" href="https://whjkm.github.io/about/"/>
 
 
 
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
-
-  <title>
+  <title> | Mars</title>
   
 
-  
-     | Mars
-  
-</title>
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-
-
-
-
-
-
-
-
-
-
-
-  <div style="display: none;">
-    <script src="//s95.cnzz.com/z_stat.php?id=1261623824&web_id=1261623824" language="JavaScript"></script>
-  </div>
-
-
-
-
-
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -184,19 +197,17 @@ Just Do It!!!">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Mars</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -204,65 +215,83 @@ Just Do It!!!">
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+        
+          
+          <li class="menu-item menu-item-about menu-item-active">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
   
 
   
@@ -270,29 +299,63 @@ Just Do It!!!">
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
-  <header class="post-header">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
+<h1 class="post-title" itemprop="name headline"></h1>
+
+<div class="post-meta">
+  
+  
 
 
+
+</div>
 
 </header>
 
-    
-    
-      <h1 id="欢迎光临我的博客"><a href="#欢迎光临我的博客" class="headerlink" title="欢迎光临我的博客"></a><strong>欢迎光临我的博客</strong></h1><p><img src="http://dn-whjkm.qbox.me/9279263e8050deb94a212bbc53a53985.jpeg" alt="共勉"></p>
-<h2 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a><strong>About me</strong></h2><h3 id="关于这个博客"><a href="#关于这个博客" class="headerlink" title="关于这个博客"></a><strong>关于这个博客</strong></h3><p><strong>基于hexo，用这个博客来记录自己的一些收获。附上我的<a href="http://blog.csdn.net/whjkm" target="_blank" rel="external">csdn博客</a>主要用来记录一些学习的经历（csdn上的博文数量还是远远多一些），这里csdn自由，可能没有csdn上那么方便，不定期会进行一些更新，记录自己学习以及过程中的点滴。</strong></p>
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <h1 id="欢迎光临我的博客"><a href="#欢迎光临我的博客" class="headerlink" title="欢迎光临我的博客"></a><strong>欢迎光临我的博客</strong></h1><p><img src="http://dn-whjkm.qbox.me/9279263e8050deb94a212bbc53a53985.jpeg" alt="共勉"></p>
+<h2 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a><strong>About me</strong></h2><h3 id="关于这个博客"><a href="#关于这个博客" class="headerlink" title="关于这个博客"></a><strong>关于这个博客</strong></h3><p><strong>基于hexo，用这个博客来记录自己的一些收获。附上我的<a href="http://blog.csdn.net/whjkm" target="_blank" rel="noopener">csdn博客</a>主要用来记录一些学习的经历（csdn上的博文数量还是远远多一些），这里csdn自由，可能没有csdn上那么方便，不定期会进行一些更新，记录自己学习以及过程中的点滴。</strong></p>
 <h2 id="Just-Do-It"><a href="#Just-Do-It" class="headerlink" title="Just Do It!!!"></a><strong>Just Do It!!!</strong></h2>
+        
+      </div>
+      
+      
+      
+    </div>
+    
+
+
+
+    
+    
     
   </div>
 
@@ -300,9 +363,6 @@ Just Do It!!!">
           </div>
           
 
-
-          
-	
         </div>
         
           
@@ -316,121 +376,176 @@ Just Do It!!!">
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://onmalbkeh.bkt.clouddn.com/20170305175657_GF3um.jpg"
-               alt="Para" />
-          <p class="site-author-name" itemprop="name">Para</p>
-           
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://onmalbkeh.bkt.clouddn.com/20170305175657_GF3um.jpg"
+                alt="Para" />
+            
+              <p class="site-author-name" itemprop="name">Para</p>
               <p class="site-description motion-element" itemprop="description">记录生活和学习的点滴</p>
+          </div>
+
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/whjkm" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/u/2841022970" target="_blank" title="Weibo"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.douban.com/people/67676061/" target="_blank" title="Douban"><i class="fa fa-fw fa-heart"></i>Douban</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://blog.csdn.net/whjkm" target="_blank" title="CSDN"><i class="fa fa-fw fa-envelope"></i>CSDN</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://music.163.com/#/user/home?id=18805992" target="_blank" title="CloudMusic"><i class="fa fa-fw fa-music"></i>CloudMusic</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
         </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">15</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/whjkm" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/u/2841022970" target="_blank" title="Weibo">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                  Weibo
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.douban.com/people/67676061/" target="_blank" title="Douban">
-                  
-                    <i class="fa fa-fw fa-heart"></i>
-                  
-                  Douban
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://blog.csdn.net/whjkm" target="_blank" title="CSDN">
-                  
-                    <i class="fa fa-fw fa-basketball-ball"></i>
-                  
-                  CSDN
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://music.163.com/#/user/home?id=18805992" target="_blank" title="CloudMusic">
-                  
-                    <i class="fa fa-fw fa-music"></i>
-                  
-                  CloudMusic
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#欢迎光临我的博客"><span class="nav-number">1.</span> <span class="nav-text">欢迎光临我的博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#About-me"><span class="nav-number">1.1.</span> <span class="nav-text">About me</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于这个博客"><span class="nav-number">1.1.1.</span> <span class="nav-text">关于这个博客</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Just-Do-It"><span class="nav-number">1.2.</span> <span class="nav-text">Just Do It!!!</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -445,27 +560,31 @@ Just Do It!!!">
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2015 - 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+        <div class="copyright">&copy; 2014 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Para</span>
+
+  
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a></div>
+
+
 
 
         
@@ -473,21 +592,26 @@ Just Do It!!!">
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">
+    <span class="site-uv" title="总访客量">
       <i class="fa fa-user"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
     </span>
   
 
   
-    <span class="site-pv">
+    <span class="site-pv" title="总访问量">
       <i class="fa fa-eye"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
     </span>
   
 </div>
+
+
+
+
+
+
+
 
 
         
@@ -499,6 +623,8 @@ Just Do It!!!">
         <i class="fa fa-arrow-up"></i>
         
       </div>
+    
+
     
 
   </div>
@@ -519,81 +645,10 @@ Just Do It!!!">
 
 
 
-  
-
-
-  
-
-
 
 
 
   
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
 
 
 
@@ -604,11 +659,116 @@ Just Do It!!!">
 
 
 
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
   
 
 
 
 
+
+  
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
 
   
 

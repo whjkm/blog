@@ -1,20 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
 
 
 
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
 
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
 
 
 
@@ -37,68 +57,30 @@
 
 
 
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
 
 
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico?v=6.3.0">
 
 
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v=6.3.0">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v=6.3.0">
 
 
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
-
-
-
+  <link rel="mask-icon" href="/favicon.ico?v=6.3.0" color="#222">
 
 
 
-<meta name="description" content="折腾hexo博客，添加统计代码">
-<meta property="og:type" content="article">
-<meta property="og:title" content="hexo博客的优化与配置——添加统计代码">
-<meta property="og:url" content="https://whjkm.github.io/2014/07/17/添加统计代码/index.html">
-<meta property="og:site_name" content="Mars">
-<meta property="og:description" content="折腾hexo博客，添加统计代码">
-<meta property="og:image" content="http://my-picture.qiniudn.com/QQ%E6%88%AA%E5%9B%BE20140716205725.png?imageView/2/w/203/h/203&e=1405686033&token=Bk7ZaNc-RgA6IX5kKHs3oeeoMS0pf-DP5dX-QRd7:uhKBR6PgfggW9tOSUMEogv_HeAk">
-<meta property="og:updated_time" content="2017-03-28T09:46:09.475Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo博客的优化与配置——添加统计代码">
-<meta name="twitter:description" content="折腾hexo博客，添加统计代码">
-<meta name="twitter:image" content="http://my-picture.qiniudn.com/QQ%E6%88%AA%E5%9B%BE20140716205725.png?imageView/2/w/203/h/203&e=1405686033&token=Bk7ZaNc-RgA6IX5kKHs3oeeoMS0pf-DP5dX-QRd7:uhKBR6PgfggW9tOSUMEogv_HeAk">
+
+
+
 
 
 
@@ -107,13 +89,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -125,18 +107,42 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="折腾hexo博客，添加统计代码">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo博客的优化与配置——添加统计代码">
+<meta property="og:url" content="https://whjkm.github.io/2014/07/17/添加统计代码/index.html">
+<meta property="og:site_name" content="Mars">
+<meta property="og:description" content="折腾hexo博客，添加统计代码">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://my-picture.qiniudn.com/QQ%E6%88%AA%E5%9B%BE20140716205725.png?imageView/2/w/203/h/203&e=1405686033&token=Bk7ZaNc-RgA6IX5kKHs3oeeoMS0pf-DP5dX-QRd7:uhKBR6PgfggW9tOSUMEogv_HeAk">
+<meta property="og:updated_time" content="2017-03-28T09:46:09.476Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo博客的优化与配置——添加统计代码">
+<meta name="twitter:description" content="折腾hexo博客，添加统计代码">
+<meta name="twitter:image" content="http://my-picture.qiniudn.com/QQ%E6%88%AA%E5%9B%BE20140716205725.png?imageView/2/w/203/h/203&e=1405686033&token=Bk7ZaNc-RgA6IX5kKHs3oeeoMS0pf-DP5dX-QRd7:uhKBR6PgfggW9tOSUMEogv_HeAk">
+
+
+
+
+
 
   <link rel="canonical" href="https://whjkm.github.io/2014/07/17/添加统计代码/"/>
 
 
 
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
-
-  <title> hexo博客的优化与配置——添加统计代码 | Mars </title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
+  <title>hexo博客的优化与配置——添加统计代码 | Mars</title>
   
 
 
@@ -147,23 +153,43 @@
 
 
 
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
-  <div style="display: none;">
-    <script src="//s95.cnzz.com/z_stat.php?id=1261623824&web_id=1261623824" language="JavaScript"></script>
-  </div>
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
+</head>
 
-
-
-
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -172,19 +198,17 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Mars</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -192,65 +216,61 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -258,12 +278,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -276,12 +304,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://whjkm.github.io/2014/07/17/添加统计代码/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Para">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="记录生活和学习的点滴">
       <meta itemprop="image" content="http://onmalbkeh.bkt.clouddn.com/20170305175657_GF3um.jpg">
     </span>
 
@@ -294,11 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                hexo博客的优化与配置——添加统计代码
+          <h1 class="post-title" itemprop="name headline">hexo博客的优化与配置——添加统计代码
               
             
           </h1>
@@ -306,6 +336,11 @@
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -313,13 +348,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-07-17T20:02:00+08:00">
-                2014-07-17
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2014-07-17 20:02:00" itemprop="dateCreated datePublished" datetime="2014-07-17T20:02:00+08:00">2014-07-17</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2017-03-28 17:46:09" itemprop="dateModified" datetime="2017-03-28T17:46:09+08:00">2017-03-28</time>
+              
             
           </span>
 
@@ -335,11 +387,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
 
                 
                 
@@ -349,6 +397,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2014/07/17/添加统计代码/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2014/07/17/添加统计代码/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -356,7 +414,10 @@
 
           
             <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-eye"></i>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
             <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
             </span>
           
@@ -364,16 +425,16 @@
           
 
           
-              <div class="post-description">
-                  折腾hexo博客，添加统计代码
-              </div>
+              <div class="post-description">折腾hexo博客，添加统计代码</div>
           
 
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -381,48 +442,41 @@
 
       
         <p>折腾hexo博客，添加统计代码</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>今天看着csdn博客的访客数，就想给hexo博客也添加统计访客的插件，上次折腾了个pacman主题，中间自带的是goole的统计，容易被墙，所以就想换一个统计工具，看了好多人用的都是cnzz的站长工具，然后我也下了一个，参照着confige.yml里面的代码，对cnzz的代码进行了修改，(模仿google统计的样子），搞完之后调试一下，发现没有添加成功，又换乘了百度统计，进行同样的处理也没有成功，后来又折腾了一下，要在前面添加了几个语句就成功了；<br>先要在D:\hexo\themes\pacman_config.yml 添加一行代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">####Analytics</div><div class="line">cnzz: true</div></pre></td></tr></table></figure></p>
-<p>这里这个cnzz的名字可以自己取；<br>然后在D:\hexo\themes\pacman\layout_partial 里面创建一个 cnzz.ejs文件；把cnzz给的代码复制进去；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;% <span class="keyword">if</span> (theme.cnzz)&#123; %&gt;<span class="comment">//前面要添加的代码</span></div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;<span class="comment">//中间的代码</span></div><div class="line">    <span class="keyword">var</span> cnzz_protocol = ((<span class="string">"https:"</span> == <span class="built_in">document</span>.location.protocol) ? <span class="string">" https://"</span>: <span class="string">" http://"</span>);</div><div class="line">    <span class="built_in">document</span>.write(<span class="built_in">unescape</span>(<span class="string">"%3Cspan id='cnzz_stat_icon_1000543074'%3E%3C/span%3E%3Cscript src='"</span> + cnzz_protocol + <span class="string">"s19.cnzz.com/z_stat.php%3Fid%3D1000543074%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"</span>));</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">&lt;% &#125; %&gt;<span class="comment">//后面要添加的</span></div></pre></td></tr></table></figure></p>
-<p>把中间的代码换了就行；<br>然后再在after_footer.ejs的后面添加上一行代码就可以显示了（这里的位置可以自己换，可以不是after_footer.ejs，也可以是footer，或者是head，看自己的喜好）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;%- partial(&apos;cnzz&apos;) %&gt;</div></pre></td></tr></table></figure></p>
-<p>然后就可以看到左下方有统计的图标了；<br>对百度统计也可以进行同样的处理；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;% <span class="keyword">if</span> (theme.cnzz)&#123; %&gt;<span class="comment">//前面要添加的代码</span></div><div class="line"><span class="comment">//百度统计的代码</span></div><div class="line">&lt;% &#125; %&gt;</div><div class="line"><span class="comment">//添加的代码</span></div></pre></td></tr></table></figure></p>
-<p>与上面的操作基本一致只是取得名字不一样；<br>完成之后可以看到百度的图标；这里百度的图标可以隐藏，（自己设置）<br>上面的是一种方法；<br>如果嫌麻烦的话直接就在after_footer.ejs的后面添加cnzz的代码；直接就可以显示了（同理，可以添加在其他位置），貌似添加在这里速度最快；但是不知道是我没设置好还是什么，这种配置站长工具检测不到；<br>以上几种工具都是用的比较的多的工具；我还添加了一个Flag Counter；这个貌似用的人不多；<br><img src="http://my-picture.qiniudn.com/QQ%E6%88%AA%E5%9B%BE20140716205725.png?imageView/2/w/203/h/203&amp;e=1405686033&amp;token=Bk7ZaNc-RgA6IX5kKHs3oeeoMS0pf-DP5dX-QRd7:uhKBR6PgfggW9tOSUMEogv_HeAk" alt="flag"><br>这里我直接是把它添加到组件中去；<br>在D:\hexo\themes\pacman_config.yml中的widgets: 中添加了flag_counter，然后再添加了一个flag_counter.ejs文件；把其中的代码复制进去；<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Visitor<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">center</span>&gt;</span>  </div><div class="line">   <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://info.flagcounter.com/iQG7"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://s09.flagcounter.com/count2/iQG7/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_0/labels_0/pageviews_0/flags_0/"</span> <span class="attr">alt</span>=<span class="string">"Flag Counter"</span> <span class="attr">border</span>=<span class="string">"0"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">center</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>然后就可以显示了，貌似这个东西有点拖网速，还要慢慢研究一下；<br>还有一个“fork me on github”不知道是我添加的方式有问题还是什么，添加之后提交，博客主页就变成404了，无法访问了，还有待研究。。。。<br>源代码托管在 <a href="https://gitcafe.com/whjkm/whjkm" target="_blank" rel="external">gitcafe项目首页</a></p>
+<a id="more"></a>
+<hr>
+<p>今天看着csdn博客的访客数，就想给hexo博客也添加统计访客的插件，上次折腾了个pacman主题，中间自带的是goole的统计，容易被墙，所以就想换一个统计工具，看了好多人用的都是cnzz的站长工具，然后我也下了一个，参照着confige.yml里面的代码，对cnzz的代码进行了修改，(模仿google统计的样子），搞完之后调试一下，发现没有添加成功，又换乘了百度统计，进行同样的处理也没有成功，后来又折腾了一下，要在前面添加了几个语句就成功了；<br>先要在D:\hexo\themes\pacman_config.yml 添加一行代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">####Analytics</span><br><span class="line">cnzz: true</span><br></pre></td></tr></table></figure></p>
+<p>这里这个cnzz的名字可以自己取；<br>然后在D:\hexo\themes\pacman\layout_partial 里面创建一个 cnzz.ejs文件；把cnzz给的代码复制进去；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (theme.cnzz)&#123; %&gt;<span class="comment">//前面要添加的代码</span></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;<span class="comment">//中间的代码</span></span><br><span class="line">    <span class="keyword">var</span> cnzz_protocol = ((<span class="string">"https:"</span> == <span class="built_in">document</span>.location.protocol) ? <span class="string">" https://"</span>: <span class="string">" http://"</span>);</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="built_in">unescape</span>(<span class="string">"%3Cspan id='cnzz_stat_icon_1000543074'%3E%3C/span%3E%3Cscript src='"</span> + cnzz_protocol + <span class="string">"s19.cnzz.com/z_stat.php%3Fid%3D1000543074%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"</span>));</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;% &#125; %&gt;/</span><span class="regexp">/后面要添加的</span></span><br></pre></td></tr></table></figure></p>
+<p>把中间的代码换了就行；<br>然后再在after_footer.ejs的后面添加上一行代码就可以显示了（这里的位置可以自己换，可以不是after_footer.ejs，也可以是footer，或者是head，看自己的喜好）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- partial(&apos;cnzz&apos;) %&gt;</span><br></pre></td></tr></table></figure></p>
+<p>然后就可以看到左下方有统计的图标了；<br>对百度统计也可以进行同样的处理；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (theme.cnzz)&#123; %&gt;<span class="comment">//前面要添加的代码</span></span><br><span class="line"><span class="comment">//百度统计的代码</span></span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line"><span class="comment">//添加的代码</span></span><br></pre></td></tr></table></figure></p>
+<p>与上面的操作基本一致只是取得名字不一样；<br>完成之后可以看到百度的图标；这里百度的图标可以隐藏，（自己设置）<br>上面的是一种方法；<br>如果嫌麻烦的话直接就在after_footer.ejs的后面添加cnzz的代码；直接就可以显示了（同理，可以添加在其他位置），貌似添加在这里速度最快；但是不知道是我没设置好还是什么，这种配置站长工具检测不到；<br>以上几种工具都是用的比较的多的工具；我还添加了一个Flag Counter；这个貌似用的人不多；<br><img src="http://my-picture.qiniudn.com/QQ%E6%88%AA%E5%9B%BE20140716205725.png?imageView/2/w/203/h/203&amp;e=1405686033&amp;token=Bk7ZaNc-RgA6IX5kKHs3oeeoMS0pf-DP5dX-QRd7:uhKBR6PgfggW9tOSUMEogv_HeAk" alt="flag"><br>这里我直接是把它添加到组件中去；<br>在D:\hexo\themes\pacman_config.yml中的widgets: 中添加了flag_counter，然后再添加了一个flag_counter.ejs文件；把其中的代码复制进去；<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Visitor<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">center</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://info.flagcounter.com/iQG7"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://s09.flagcounter.com/count2/iQG7/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_0/labels_0/pageviews_0/flags_0/"</span> <span class="attr">alt</span>=<span class="string">"Flag Counter"</span> <span class="attr">border</span>=<span class="string">"0"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">center</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>然后就可以显示了，貌似这个东西有点拖网速，还要慢慢研究一下；<br>还有一个“fork me on github”不知道是我添加的方式有问题还是什么，添加之后提交，博客主页就变成404了，无法访问了，还有待研究。。。。<br>源代码托管在 <a href="https://gitcafe.com/whjkm/whjkm" target="_blank" rel="noopener">gitcafe项目首页</a></p>
 
       
     </div>
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
 
-    <div>
-      
-        
-
-      
-    </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
           
         </div>
       
 
       
-        
+      
       
 
       
@@ -446,6 +500,10 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -453,34 +511,23 @@
     <div class="post-spread">
       
     </div>
-		   <div id="container"> </div>
-               <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-                <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-                <script>
-                var gitment = new Gitment({
-					  id: '页面 ID', // 可选。默认为 location.href
-					  owner: 'whjkm',
-					  repo: 'whjkm.github.io',
-					  oauth: {
-						client_id: '714965cedbb13275b08e',
-						client_secret: '13f9ca22b3b0f4fb90efddf8bc9ba6b2a46a8439',
-						},
-						})
-						gitment.render('container')
-				</script>
   </div>
 
 
           </div>
           
 
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
 
-          
-  <div class="comments" id="comments">
-    
-  </div>
+  
 
-	
+
+
         </div>
         
           
@@ -494,146 +541,151 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://onmalbkeh.bkt.clouddn.com/20170305175657_GF3um.jpg"
-               alt="Para" />
-          <p class="site-author-name" itemprop="name">Para</p>
-           
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://onmalbkeh.bkt.clouddn.com/20170305175657_GF3um.jpg"
+                alt="Para" />
+            
+              <p class="site-author-name" itemprop="name">Para</p>
               <p class="site-description motion-element" itemprop="description">记录生活和学习的点滴</p>
+          </div>
+
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/whjkm" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/u/2841022970" target="_blank" title="Weibo"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.douban.com/people/67676061/" target="_blank" title="Douban"><i class="fa fa-fw fa-heart"></i>Douban</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://blog.csdn.net/whjkm" target="_blank" title="CSDN"><i class="fa fa-fw fa-envelope"></i>CSDN</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://music.163.com/#/user/home?id=18805992" target="_blank" title="CloudMusic"><i class="fa fa-fw fa-music"></i>CloudMusic</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
         </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">15</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/whjkm" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/u/2841022970" target="_blank" title="Weibo">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                  Weibo
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.douban.com/people/67676061/" target="_blank" title="Douban">
-                  
-                    <i class="fa fa-fw fa-heart"></i>
-                  
-                  Douban
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://blog.csdn.net/whjkm" target="_blank" title="CSDN">
-                  
-                    <i class="fa fa-fw fa-basketball-ball"></i>
-                  
-                  CSDN
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://music.163.com/#/user/home?id=18805992" target="_blank" title="CloudMusic">
-                  
-                    <i class="fa fa-fw fa-music"></i>
-                  
-                  CloudMusic
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -648,27 +700,31 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2015 - 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+        <div class="copyright">&copy; 2014 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Para</span>
+
+  
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a></div>
+
+
 
 
         
@@ -676,21 +732,26 @@
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">
+    <span class="site-uv" title="总访客量">
       <i class="fa fa-user"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
     </span>
   
 
   
-    <span class="site-pv">
+    <span class="site-pv" title="总访问量">
       <i class="fa fa-eye"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
     </span>
   
 </div>
+
+
+
+
+
+
+
 
 
         
@@ -702,6 +763,8 @@
         <i class="fa fa-arrow-up"></i>
         
       </div>
+    
+
     
 
   </div>
@@ -722,85 +785,10 @@
 
 
 
-  
-
-
-  
-
-
 
 
 
   
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
 
 
 
@@ -811,11 +799,140 @@
 
 
 
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
   
 
 
 
 
+
+  
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'whjkm',
+            repo: 'whjkm.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '13f9ca22b3b0f4fb90efddf8bc9ba6b2a46a8439',
+            
+                client_id: '714965cedbb13275b08e'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
 
   
 

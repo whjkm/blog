@@ -1,20 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
 
 
 
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
 
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
 
 
 
@@ -37,66 +57,30 @@
 
 
 
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
 
 
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="gitcafe git," />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico?v=6.3.0">
 
 
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v=6.3.0">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v=6.3.0">
 
 
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
-
-
-
+  <link rel="mask-icon" href="/favicon.ico?v=6.3.0" color="#222">
 
 
 
-<meta name="description" content="折腾网页，用gitcafe托管静态网页">
-<meta property="og:type" content="article">
-<meta property="og:title" content="利用gitcafe托管静态网页">
-<meta property="og:url" content="https://whjkm.github.io/2014/11/29/利用gitcafe托管静态网页/index.html">
-<meta property="og:site_name" content="Mars">
-<meta property="og:description" content="折腾网页，用gitcafe托管静态网页">
-<meta property="og:updated_time" content="2017-03-28T09:46:09.473Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用gitcafe托管静态网页">
-<meta name="twitter:description" content="折腾网页，用gitcafe托管静态网页">
+
+
+
 
 
 
@@ -105,13 +89,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -123,18 +107,40 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="折腾网页，用gitcafe托管静态网页">
+<meta name="keywords" content="gitcafe,git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用gitcafe托管静态网页">
+<meta property="og:url" content="https://whjkm.github.io/2014/11/29/利用gitcafe托管静态网页/index.html">
+<meta property="og:site_name" content="Mars">
+<meta property="og:description" content="折腾网页，用gitcafe托管静态网页">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-07-17T01:43:05.374Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="利用gitcafe托管静态网页">
+<meta name="twitter:description" content="折腾网页，用gitcafe托管静态网页">
+
+
+
+
+
 
   <link rel="canonical" href="https://whjkm.github.io/2014/11/29/利用gitcafe托管静态网页/"/>
 
 
 
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
-
-  <title> 利用gitcafe托管静态网页 | Mars </title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
+  <title>利用gitcafe托管静态网页 | Mars</title>
   
 
 
@@ -145,23 +151,43 @@
 
 
 
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
-  <div style="display: none;">
-    <script src="//s95.cnzz.com/z_stat.php?id=1261623824&web_id=1261623824" language="JavaScript"></script>
-  </div>
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
+</head>
 
-
-
-
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -170,19 +196,17 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Mars</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -190,65 +214,61 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -256,12 +276,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -274,12 +302,18 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://whjkm.github.io/2014/11/29/利用gitcafe托管静态网页/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Para">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="记录生活和学习的点滴">
       <meta itemprop="image" content="http://onmalbkeh.bkt.clouddn.com/20170305175657_GF3um.jpg">
     </span>
 
@@ -292,11 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                利用gitcafe托管静态网页
+          <h1 class="post-title" itemprop="name headline">利用gitcafe托管静态网页
               
             
           </h1>
@@ -304,6 +334,11 @@
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -311,13 +346,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-11-29T19:32:20+08:00">
-                2014-11-29
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2014-11-29 19:32:20" itemprop="dateCreated datePublished" datetime="2014-11-29T19:32:20+08:00">2014-11-29</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-07-17 09:43:05" itemprop="dateModified" datetime="2018-07-17T09:43:05+08:00">2018-07-17</time>
+              
             
           </span>
 
@@ -333,11 +385,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
 
                 
                 
@@ -347,6 +395,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2014/11/29/利用gitcafe托管静态网页/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2014/11/29/利用gitcafe托管静态网页/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -354,7 +412,10 @@
 
           
             <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-eye"></i>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
             <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
             </span>
           
@@ -367,7 +428,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -375,57 +438,50 @@
 
       
         <p>折腾网页，用gitcafe托管静态网页<br><a id="more"></a></p>
-<p>由于<a href="http://whjkm.gitcafe.com/" target="_blank" rel="external">我的博客系统hexo</a>就是托管在gitcafe上面,所以对于gitcafe和github就有着比较浓厚的兴趣，前段时间又把git学习了一下，算是刚好入了个门吧；在gitcafe上有一个gitcefe-pages分支，可以用于展示我们的一个页面，给我们提供了一个免费的空间，也可以使用它的二级域名，但是项目名称和<em>**</em>.gitcafe.com一样（二级域名）；而且一个账号只能有一个这样的页面.<br>如果我们要想搭建一个页面，首先我们要申请一个gitcafe的账号（github也有这个功能，但是速度没有这么快）<a href="https://gitcafe.com/whjkm" target="_blank" rel="external">我的gitcafe主页</a> 一看gitcafe这个名字，肯定是和git有关系，所以我们还要在电脑上安装git（本人用的是windows系统）在我之前的博客里有详细的介绍怎么安装<a href="http://blog.csdn.net/whjkm/article/details/24264905" target="_blank" rel="external">初探hexo博客</a>，第一次注册的时候，要添加在gitcafe上添加ssh密匙，ssh好像是一种加密协议，就相当于是验证我们的身份，因为我们的自己的电脑是在本地，而服务器端是在远端，所以我们就需要一种安全的传输协议，第一次添加这个的时候我也搞了很久，不知道怎么搞；多弄几次就清楚了；<br>如果我们是第一次用gitcafe的话就需要创建一个新的ssh密匙；<br>在自己的电脑上，需要提交托管的位置，进行git bash 然后进入一个窗口界面，输入下面的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd ~/.ssh</div></pre></td></tr></table></figure></p>
-<p>进入ssh的目录；如果没有这个目录的话，可以自己手动创建一个；也可以输入命令创建：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir ~/.ssh</div></pre></td></tr></table></figure></p>
-<p>接下来我们就要创建一个新的密匙：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;YOUR_EMAIL@YOUREMAIL.COM&quot;</div></pre></td></tr></table></figure></p>
-<p>把其中的邮箱地址换成自己的；<br>然后就会提示下面的信息；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C &quot;YOUR_EMAIL@YOUREMAIL.COM&quot;  </div><div class="line">Generating public/private rsa key pair.  </div><div class="line">Enter passphrase (empty for no passphrase):  </div><div class="line">Enter same passphrase again:  </div><div class="line">Your identification has been saved in /c/Users/USERNAME/.ssh/id_rsa.  </div><div class="line">Your public key has been saved in /c/Users/USERNAME/.ssh/id_rsa.pub.  </div><div class="line">The key fingerprint is:  </div><div class="line">15:81:d2:7a:c6:6c:0f:ec:b0:b6:d4:18:b8:d1:41:48 YOUR_EMAIL@YOUREMAIL.COM</div></pre></td></tr></table></figure></p>
-<p>其中就需要我们输入passphrase ，这个就是我们以后提交需要输入的密码；<br>然后，我们的ssh密匙就生成啦，我们就可以去用户目录 (~/.ssh/) 下看到私钥 id_rsa 和公钥 id_rsa.pub 这两个文件，id_rsa是存储我们的个人信息的，千万不要把id_rsa的信息告诉别人；<br>然后我们就可以把我们的ssh密匙添加到gitcafe上；<br>进入 GitCafe –&gt;账户设置–&gt;SSH 公钥管理设置项，点击添加新公钥 按钮，在 Title 文本框中输入任意字符，在 Key 文本框粘贴刚才复制的公钥字符串，按保存按钮完成操作。<br>添加完成后，我们就要进行连接测试，看我们是否能够连接上gitcafe；<br>在git bash 里面输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@gitcafe.com</div></pre></td></tr></table></figure></p>
-<p>如果是第一次连接的话，会出现下面的提示信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">The authenticity of host &apos;gitcafe.com (50.116.2.223)&apos; can&apos;t be established.  </div><div class="line">#RSA key fingerprint is 84:9e:c9:8e:7f:36:28:08:7e:13:bf:43:12:74:11:4e.  </div><div class="line">#Are you sure you want to continue connecting (yes/no)?</div></pre></td></tr></table></figure></p>
-<p>我们就核对上面的信息和我们生成的是否一致，如果一致我们就输入 yes；<br>然后中间会提示要我们输入passphrse口令；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Enter passphrase for key &apos;/c/Users/USERNAME/.ssh/id_rsa&apos;:</div></pre></td></tr></table></figure></p>
-<p>连接成功会出现下面的提示信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hi USERNAME! You&apos;ve successfully authenticated, but GitCafe does not provide shell access.</div></pre></td></tr></table></figure></p>
+<p>由于<a href="http://whjkm.gitcafe.com/" target="_blank" rel="noopener">我的博客系统hexo</a>就是托管在gitcafe上面,所以对于gitcafe和github就有着比较浓厚的兴趣，前段时间又把git学习了一下，算是刚好入了个门吧；在gitcafe上有一个gitcefe-pages分支，可以用于展示我们的一个页面，给我们提供了一个免费的空间，也可以使用它的二级域名，但是项目名称和<em>**</em>.gitcafe.com一样（二级域名）；而且一个账号只能有一个这样的页面.<br>如果我们要想搭建一个页面，首先我们要申请一个gitcafe的账号（github也有这个功能，但是速度没有这么快）<a href="https://gitcafe.com/whjkm" target="_blank" rel="noopener">我的gitcafe主页</a> 一看gitcafe这个名字，肯定是和git有关系，所以我们还要在电脑上安装git（本人用的是windows系统）在我之前的博客里有详细的介绍怎么安装<a href="http://blog.csdn.net/whjkm/article/details/24264905" target="_blank" rel="noopener">初探hexo博客</a>，第一次注册的时候，要添加在gitcafe上添加ssh密匙，ssh好像是一种加密协议，就相当于是验证我们的身份，因为我们的自己的电脑是在本地，而服务器端是在远端，所以我们就需要一种安全的传输协议，第一次添加这个的时候我也搞了很久，不知道怎么搞；多弄几次就清楚了；<br>如果我们是第一次用gitcafe的话就需要创建一个新的ssh密匙；<br>在自己的电脑上，需要提交托管的位置，进行git bash 然后进入一个窗口界面，输入下面的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br></pre></td></tr></table></figure></p>
+<p>进入ssh的目录；如果没有这个目录的话，可以自己手动创建一个；也可以输入命令创建：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/.ssh</span><br></pre></td></tr></table></figure></p>
+<p>接下来我们就要创建一个新的密匙：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;YOUR_EMAIL@YOUREMAIL.COM&quot;</span><br></pre></td></tr></table></figure></p>
+<p>把其中的邮箱地址换成自己的；<br>然后就会提示下面的信息；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;YOUR_EMAIL@YOUREMAIL.COM&quot;  </span><br><span class="line">Generating public/private rsa key pair.  </span><br><span class="line">Enter passphrase (empty for no passphrase):  </span><br><span class="line">Enter same passphrase again:  </span><br><span class="line">Your identification has been saved in /c/Users/USERNAME/.ssh/id_rsa.  </span><br><span class="line">Your public key has been saved in /c/Users/USERNAME/.ssh/id_rsa.pub.  </span><br><span class="line">The key fingerprint is:  </span><br><span class="line">15:81:d2:7a:c6:6c:0f:ec:b0:b6:d4:18:b8:d1:41:48 YOUR_EMAIL@YOUREMAIL.COM</span><br></pre></td></tr></table></figure></p>
+<p>其中就需要我们输入passphrase ，这个就是我们以后提交需要输入的密码；<br>然后，我们的ssh密匙就生成啦，我们就可以去用户目录 (~/.ssh/) 下看到私钥 id_rsa 和公钥 id_rsa.pub 这两个文件，id_rsa是存储我们的个人信息的，千万不要把id_rsa的信息告诉别人；<br>然后我们就可以把我们的ssh密匙添加到gitcafe上；<br>进入 GitCafe –&gt;账户设置–&gt;SSH 公钥管理设置项，点击添加新公钥 按钮，在 Title 文本框中输入任意字符，在 Key 文本框粘贴刚才复制的公钥字符串，按保存按钮完成操作。<br>添加完成后，我们就要进行连接测试，看我们是否能够连接上gitcafe；<br>在git bash 里面输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@gitcafe.com</span><br></pre></td></tr></table></figure></p>
+<p>如果是第一次连接的话，会出现下面的提示信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host &apos;gitcafe.com (50.116.2.223)&apos; can&apos;t be established.  </span><br><span class="line">#RSA key fingerprint is 84:9e:c9:8e:7f:36:28:08:7e:13:bf:43:12:74:11:4e.  </span><br><span class="line">#Are you sure you want to continue connecting (yes/no)?</span><br></pre></td></tr></table></figure></p>
+<p>我们就核对上面的信息和我们生成的是否一致，如果一致我们就输入 yes；<br>然后中间会提示要我们输入passphrse口令；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase for key &apos;/c/Users/USERNAME/.ssh/id_rsa&apos;:</span><br></pre></td></tr></table></figure></p>
+<p>连接成功会出现下面的提示信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi USERNAME! You&apos;ve successfully authenticated, but GitCafe does not provide shell access.</span><br></pre></td></tr></table></figure></p>
 <p>用户名就是我们gitcafe的用户名。</p>
-<p>这是我们第一次使用ssh的步骤，像我开始用了一个账号搭建了我的博客，然后在github上还有密匙，然后我又注册了一个账号准备搭建一个页面；这怎么办呢？开始我搞的时候用的密匙总是会混乱；昨天我就找到了一个不是很好的解决办法；还是解决了这个问题；<br>第一步还是生成另一个密匙：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;YOUR_EMAIL@YOUREMAIL.COM&quot; -f ~/.ssh/gitcafe</div></pre></td></tr></table></figure></p>
-<p>这里的步骤和前面的基本上差不多；<br>第二步和前面的第二步一样，我就不重复了；<br>第三步这里就是关键的一步：在 SSH 用户配置文件 ~/.ssh/config 中指定对应服务所使用的公秘钥名称，如果没有 config 文件的话就新建一个，并输入以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Host gitcafe.com www.gitcafe.com  </div><div class="line">  IdentityFile ~/.ssh/gitcafe</div></pre></td></tr></table></figure></p>
-<p>后面的那个名字就是你密匙的名字；前面我在github上创建的密匙，我也是通过这种方式添加的，只不过把网址换成了github；<br>后面这里又有了一个问题，因为我是有两个账号，我的gitcafe密匙就是有两个，所以，我在里面就添加了两个密匙，第一个密匙就是我当前要用的密匙，当我们需要用哪个就把哪个放到第一位，虽然有点麻烦，但是还是可以存在两个一起用了；（可能这里还会有更好的方法，也希望大家有更好的方法可以告诉我啊）<br>后面的步骤就和前面的一样了，添加到gitcafe和测试连接；<br>我们可以连接在gitcafe之后，这下我们就可以搭建我们的页面了，也可以搭建一个博客系统，我搭建的博客系统是hexo（静态页面的博客）；<br>这里就需要利用我们的git工具了，首先我们在gitcafe上面创建一个公开项目（因为我们用的是免费的托管，私有项目是要花钱的），开始我们就可以填好我们的项目名，项目名要和我们的用户名一样，这样我们才能使用二级域名；前面填好之后，在项目主页那里应该就会自动生成我们的二级域名；<br>然后我们点击完成，下面就应该会出现一些代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">1全局设置:  </div><div class="line">git config --global user.name &apos;&apos;  </div><div class="line">git config --global user.email &apos; 你的邮箱&apos;  </div><div class="line">2接下来:  </div><div class="line">• 在本地创建新的 Git 仓库  </div><div class="line">mkdir 1  </div><div class="line">cd 1  </div><div class="line">git init  </div><div class="line">touch README.md  </div><div class="line">git add README.md  </div><div class="line">git commit -m &apos;first commit&apos;  </div><div class="line">git remote add origin &apos;git@gitcafe.com:你的那个项目地址&apos;  </div><div class="line">git push -u origin master  </div><div class="line">或  </div><div class="line">• 在本地已有 Git 仓库  </div><div class="line">cd existing_git_repo  </div><div class="line">git remote add origin &apos;git@gitcafe.com:项目地址&apos;  </div><div class="line">git push -u origin master</div></pre></td></tr></table></figure></p>
-<p>然后我们就可以直接再gitcafe里面添加文件了，也可以在本机创建一个新的文件夹然后再提交到gitcafe，也可以把一个已有的文件夹，git Init然后再把这个文件夹提交到gitcafe上，按照上面的代码就行了；<br>这里是第一次提交的代码；后面的提交更新就可以不用加上-u了，这些内容可以去学习一下git；<br>然后这里我们默认在git里面创建的是master 分支；而我们gitcafe上面可以展示的页面是gitcafe-pages分支，首先我们可以创建一个新的分支:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b gitcafe-pages</div></pre></td></tr></table></figure></p>
-<p>其他的那些代码可以不变，这样我们提交的东西就会生成在gitcafe-pages分支里面，我们提交的时候就和前面有点不同了；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git remote add origin &apos;git@gitcafe.com:项目地址&apos;  </div><div class="line">git push -u origin gitcafe-pages</div></pre></td></tr></table></figure></p>
+<p>这是我们第一次使用ssh的步骤，像我开始用了一个账号搭建了我的博客，然后在github上还有密匙，然后我又注册了一个账号准备搭建一个页面；这怎么办呢？开始我搞的时候用的密匙总是会混乱；昨天我就找到了一个不是很好的解决办法；还是解决了这个问题；<br>第一步还是生成另一个密匙：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;YOUR_EMAIL@YOUREMAIL.COM&quot; -f ~/.ssh/gitcafe</span><br></pre></td></tr></table></figure></p>
+<p>这里的步骤和前面的基本上差不多；<br>第二步和前面的第二步一样，我就不重复了；<br>第三步这里就是关键的一步：在 SSH 用户配置文件 ~/.ssh/config 中指定对应服务所使用的公秘钥名称，如果没有 config 文件的话就新建一个，并输入以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Host gitcafe.com www.gitcafe.com  </span><br><span class="line">  IdentityFile ~/.ssh/gitcafe</span><br></pre></td></tr></table></figure></p>
+<p>后面的那个名字就是你密匙的名字；前面我在github上创建的密匙，我也是通过这种方式添加的，只不过把网址换成了github；<br>后面这里又有了一个问题，因为我是有两个账号，我的gitcafe密匙就是有两个，所以，我在里面就添加了两个密匙，第一个密匙就是我当前要用的密匙，当我们需要用哪个就把哪个放到第一位，虽然有点麻烦，但是还是可以存在两个一起用了；（可能这里还会有更好的方法，也希望大家有更好的方法可以告诉我啊）<br>后面的步骤就和前面的一样了，添加到gitcafe和测试连接；<br>我们可以连接在gitcafe之后，这下我们就可以搭建我们的页面了，也可以搭建一个博客系统，我搭建的博客系统是hexo（静态页面的博客）；<br>这里就需要利用我们的git工具了，首先我们在gitcafe上面创建一个公开项目（因为我们用的是免费的托管，私有项目是要花钱的），开始我们就可以填好我们的项目名，项目名要和我们的用户名一样，这样我们才能使用二级域名；前面填好之后，在项目主页那里应该就会自动生成我们的二级域名；<br>然后我们点击完成，下面就应该会出现一些代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">1全局设置:  </span><br><span class="line">git config --global user.name &apos;&apos;  </span><br><span class="line">git config --global user.email &apos; 你的邮箱&apos;  </span><br><span class="line">2接下来:  </span><br><span class="line">• 在本地创建新的 Git 仓库  </span><br><span class="line">mkdir 1  </span><br><span class="line">cd 1  </span><br><span class="line">git init  </span><br><span class="line">touch README.md  </span><br><span class="line">git add README.md  </span><br><span class="line">git commit -m &apos;first commit&apos;  </span><br><span class="line">git remote add origin &apos;git@gitcafe.com:你的那个项目地址&apos;  </span><br><span class="line">git push -u origin master  </span><br><span class="line">或  </span><br><span class="line">• 在本地已有 Git 仓库  </span><br><span class="line">cd existing_git_repo  </span><br><span class="line">git remote add origin &apos;git@gitcafe.com:项目地址&apos;  </span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
+<p>然后我们就可以直接再gitcafe里面添加文件了，也可以在本机创建一个新的文件夹然后再提交到gitcafe，也可以把一个已有的文件夹，git Init然后再把这个文件夹提交到gitcafe上，按照上面的代码就行了；<br>这里是第一次提交的代码；后面的提交更新就可以不用加上-u了，这些内容可以去学习一下git；<br>然后这里我们默认在git里面创建的是master 分支；而我们gitcafe上面可以展示的页面是gitcafe-pages分支，首先我们可以创建一个新的分支:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b gitcafe-pages</span><br></pre></td></tr></table></figure></p>
+<p>其他的那些代码可以不变，这样我们提交的东西就会生成在gitcafe-pages分支里面，我们提交的时候就和前面有点不同了；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin &apos;git@gitcafe.com:项目地址&apos;  </span><br><span class="line">git push -u origin gitcafe-pages</span><br></pre></td></tr></table></figure></p>
 <p>因为我们是要提交到gitcafe-pages的这个分支上；所以需要把master分支改成gitcafe-pages分支；然后我们就可以提交我们的页面代码了；主要是html，里面可以含有css和js；搭建好了之后，不会马上就可以在二级域名上显示，要等一会；还有的就是，那个HTML文件名最好叫做index.html,我昨天开始不是这个名字，提交之后没有显示，改了之后，就可以显示了。然后我们就可以自定义我们的页面啦，做了一次小小的搬运工，祝大家折腾愉快~~</p>
 
       
     </div>
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
 
-    <div>
-      
-        
-
-      
-    </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/gitcafe-git/" rel="tag"><i class="fa fa-tag"></i> gitcafe git</a>
+            <a href="/tags/gitcafe/" rel="tag"># gitcafe</a>
+          
+            <a href="/tags/git/" rel="tag"># git</a>
           
         </div>
       
 
       
-        
+      
       
 
       
@@ -453,6 +509,10 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -460,34 +520,23 @@
     <div class="post-spread">
       
     </div>
-		   <div id="container"> </div>
-               <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-                <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-                <script>
-                var gitment = new Gitment({
-					  id: '页面 ID', // 可选。默认为 location.href
-					  owner: 'whjkm',
-					  repo: 'whjkm.github.io',
-					  oauth: {
-						client_id: '714965cedbb13275b08e',
-						client_secret: '13f9ca22b3b0f4fb90efddf8bc9ba6b2a46a8439',
-						},
-						})
-						gitment.render('container')
-				</script>
   </div>
 
 
           </div>
           
 
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
 
-          
-  <div class="comments" id="comments">
-    
-  </div>
+  
 
-	
+
+
         </div>
         
           
@@ -501,119 +550,149 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://onmalbkeh.bkt.clouddn.com/20170305175657_GF3um.jpg"
-               alt="Para" />
-          <p class="site-author-name" itemprop="name">Para</p>
-           
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://onmalbkeh.bkt.clouddn.com/20170305175657_GF3um.jpg"
+                alt="Para" />
+            
+              <p class="site-author-name" itemprop="name">Para</p>
               <p class="site-description motion-element" itemprop="description">记录生活和学习的点滴</p>
+          </div>
+
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/whjkm" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/u/2841022970" target="_blank" title="Weibo"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.douban.com/people/67676061/" target="_blank" title="Douban"><i class="fa fa-fw fa-heart"></i>Douban</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://blog.csdn.net/whjkm" target="_blank" title="CSDN"><i class="fa fa-fw fa-envelope"></i>CSDN</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://music.163.com/#/user/home?id=18805992" target="_blank" title="CloudMusic"><i class="fa fa-fw fa-music"></i>CloudMusic</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
         </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">15</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/whjkm" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/u/2841022970" target="_blank" title="Weibo">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                  Weibo
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.douban.com/people/67676061/" target="_blank" title="Douban">
-                  
-                    <i class="fa fa-fw fa-heart"></i>
-                  
-                  Douban
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://blog.csdn.net/whjkm" target="_blank" title="CSDN">
-                  
-                    <i class="fa fa-fw fa-basketball-ball"></i>
-                  
-                  CSDN
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://music.163.com/#/user/home?id=18805992" target="_blank" title="CloudMusic">
-                  
-                    <i class="fa fa-fw fa-music"></i>
-                  
-                  CloudMusic
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
       </section>
 
       
@@ -630,27 +709,31 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2015 - 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+        <div class="copyright">&copy; 2014 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Para</span>
+
+  
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a></div>
+
+
 
 
         
@@ -658,21 +741,26 @@
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">
+    <span class="site-uv" title="总访客量">
       <i class="fa fa-user"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
     </span>
   
 
   
-    <span class="site-pv">
+    <span class="site-pv" title="总访问量">
       <i class="fa fa-eye"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
     </span>
   
 </div>
+
+
+
+
+
+
+
 
 
         
@@ -684,6 +772,8 @@
         <i class="fa fa-arrow-up"></i>
         
       </div>
+    
+
     
 
   </div>
@@ -704,85 +794,10 @@
 
 
 
-  
-
-
-  
-
-
 
 
 
   
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
 
 
 
@@ -793,11 +808,140 @@
 
 
 
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
   
 
 
 
 
+
+  
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'whjkm',
+            repo: 'whjkm.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '13f9ca22b3b0f4fb90efddf8bc9ba6b2a46a8439',
+            
+                client_id: '714965cedbb13275b08e'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
 
   
 
